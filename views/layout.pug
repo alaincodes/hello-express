@@ -4,4 +4,19 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    header
+      nav
+        ul
+          each url, title in {'home': '/', 'about': '/about'}
+            li
+              a(href=url)= title
+
     block content
+
+    footer
+      nav
+        ul
+          each url, title in {'Cookies': '/', 'Legals': '/'}
+            li
+              a(href=url)= title
+
